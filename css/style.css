@@ -442,7 +442,7 @@ template {
   color: #fffefe;
   text-decoration: none;
   opacity: 0.55;
-  background-image: url("/img/icon-enter.png");
+  background-image: url("../img/icon-enter.png");
   background-repeat: no-repeat;
   background-position: center right;
   transition: opacity 300ms ease; }
@@ -543,14 +543,14 @@ template {
     border: none;
     outline: none;
     background-color: transparent;
-    background-image: url("/img/hamburger.svg");
+    background-image: url("../img/hamburger.svg");
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
     transition: transform 500ms ease, background-image 300ms ease; }
     .sidebar__toggle--close {
       transform: translateX(230px);
-      background-image: url("/img/close.svg"); } }
+      background-image: url("../img/close.svg"); } }
 
 .content {
   -ms-flex: 1 1 auto;
@@ -675,7 +675,7 @@ template {
     cursor: pointer; }
 
 .form__checkbox-input:checked::after {
-  background-image: url("/img/icon-tick.png"); }
+  background-image: url("../img/icon-tick.png"); }
 
 .form__photo {
   width: 157px;
