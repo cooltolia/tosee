@@ -450,6 +450,7 @@ template {
     opacity: 1; }
 
 .main {
+  position: relative;
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
@@ -494,14 +495,14 @@ template {
   padding-top: 62px;
   padding-bottom: 30px;
   box-shadow: inset 0 -1px 0 #9b9ea1, 0 1px 0 #cdcecf;
-  background-image: url("/img/icon-tosee.png");
+  background-image: url("../img/icon-tosee.png");
   background-repeat: no-repeat;
   background-position: top 12px left 21px; }
   .sidebar__block:nth-of-type(2) {
-    background-image: url("/img/icon-probank.png"); }
+    background-image: url("../img/icon-probank.png"); }
   .sidebar__block:last-of-type {
     box-shadow: none;
-    background-image: url("/img/icon-shotme.png"); }
+    background-image: url("../img/icon-shotme.png"); }
 
 .sidebar__link {
   display: block;
@@ -527,18 +528,22 @@ template {
 
 @media (max-width: 900px) {
   .sidebar {
-    position: fixed;
-    height: 150%;
-    min-height: 100%;
-    transform: translateX(-110%); }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-110%);
+    z-index: 99; }
     .sidebar--open {
       transform: translate(0); }
   .sidebar__toggle {
     display: block;
     position: fixed;
-    width: 63px;
-    height: 63px;
-    top: 45px;
+    z-index: 100;
+    width: 33px;
+    height: 33px;
+    top: 50px;
     left: 25px;
     border: none;
     outline: none;
@@ -549,7 +554,8 @@ template {
     cursor: pointer;
     transition: transform 500ms ease, background-image 300ms ease; }
     .sidebar__toggle--close {
-      transform: translateX(230px);
+      top: 30px;
+      left: calc(100% - 63px);
       background-image: url("../img/close.svg"); } }
 
 .content {
@@ -577,9 +583,10 @@ template {
 @media (max-width: 1100px) {
   .profile {
     padding-left: 10px;
-    padding-right: 20px; } }
+    padding-right: 10px; } }
 
 .form {
+  box-sizing: border-box;
   width: 100%;
   display: -ms-flexbox;
   display: flex;
@@ -625,7 +632,7 @@ template {
   box-sizing: border-box;
   width: 75%;
   max-width: 550px;
-  min-width: 300px;
+  min-width: 200px;
   padding: 10px;
   border: none;
   color: rgba(0, 0, 0, 0.7);
@@ -723,3 +730,156 @@ template {
   margin-left: 260px;
   border-radius: 9px;
   background-color: #679178; }
+
+@media (max-width: 768px) {
+  .form {
+    padding-left: 10%;
+    padding-right: 10%; }
+  .form__block {
+    margin-bottom: 25px; }
+  .form__row {
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    .form__row--inline {
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .form__label {
+    min-width: 100px;
+    width: auto;
+    text-align: left;
+    margin-bottom: 5px; }
+  .form__input {
+    width: 100%;
+    margin-bottom: 10px; }
+  .form__text-input {
+    width: 100%; }
+  .form__pass-input {
+    margin-bottom: 0; }
+  .form__photo {
+    margin-bottom: 15px; }
+  .form__change-btn {
+    margin-top: 0;
+    margin-bottom: 20px; }
+  .form__submit {
+    margin-left: 0; } }
+
+.login {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #d2d2d2; }
+
+.login__modal {
+  box-sizing: border-box;
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  width: 700px;
+  padding-top: 309px;
+  padding-left: 140px;
+  padding-right: 140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 9px;
+  background-image: url("../img/logo-med.png");
+  background-size: 179px 157px;
+  background-repeat: no-repeat;
+  background-position: top 79px center; }
+
+.login__form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap; }
+
+.login__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 20px;
+  margin-bottom: 27px;
+  background-color: rgba(210, 210, 210, 0.5);
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Tahoma, Verdana, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 46px;
+  transition: background-color 300ms ease; }
+  .login__input:last-of-type {
+    margin-bottom: 0; }
+  .login__input:hover, .login__input:focus {
+    background-color: #d2d2d2;
+    outline: none; }
+  .login__input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.3); }
+  .login__input:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.3); }
+  .login__input::placeholder {
+    color: rgba(0, 0, 0, 0.3); }
+
+.login__submit {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  box-sizing: border-box;
+  color: #fff;
+  border: 1px solid #dedcdc;
+  cursor: pointer;
+  width: 220px;
+  height: 47px;
+  margin: 57px auto 48px;
+  border-radius: 9px;
+  background-color: #498a69;
+  color: #ffffff;
+  font-family: Tahoma, Verdana, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 400; }
+
+.login__footer {
+  width: 100%;
+  min-height: 135px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.login__link {
+  font-family: Tahoma, Verdana, Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 300ms ease; }
+  .login__link:hover {
+    color: black; }
+
+@media (max-width: 768px) {
+  .login__modal {
+    width: 500px;
+    padding-left: 35px;
+    padding-right: 35px; } }
+
+@media (max-width: 480px) {
+  .login__modal {
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px; }
+  .login__footer {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    min-height: 70px;
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
+  .login__link {
+    margin-bottom: 15px; } }
