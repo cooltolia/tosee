@@ -1,0 +1,28 @@
+.main-header {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 29px;
+
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 20px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #000;
+}
+
+.main-header__logo {
+  padding-top: 2px;
+  opacity: 0.55;
+
+  transition: opacity 300ms ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}

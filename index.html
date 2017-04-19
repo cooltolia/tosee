@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="main-header">
+    <a class="main-header__logo">
+      <img src="/img/logo-sm.png" alt="Логотип">
+    </a>
+    <div class="actions">
+      <a href="#" class="actions__login">Выйти</a>
+    </div>
+  </header>
+  <main class="main">
+    <sidebar class="sidebar">
+      <div class="sidebar__ava">
+        <img src="/img/profile-img.jpg" width="157" height="157" alt="Ваша аватарка">
+      </div>
+      <div class="sidebar__nickname">Тёма</div>
+      <div class="sidebar__nav">
+        <a href="#" class="sidebar__link sidebar__link--alone sidebar__link--active">Профиль</a>
+        <div class="sidebar__block">
+          <a href="#" class="sidebar__link">Редактор</a>
+          <a href="#" class="sidebar__link">Модератор</a>
+          <a href="#" class="sidebar__link">Директор</a>
+        </div>
+        <div class="sidebar__block">
+          <a href="#" class="sidebar__link">Фотограф</a>
+          <a href="#" class="sidebar__link">Модель</a>
+        </div>
+        <div class="sidebar__block">
+          <a href="#" class="sidebar__link">Меню шотми 1</a>
+          <a href="#" class="sidebar__link">Меню шотми 2</a>
+        </div>
+      </div>
+    </sidebar>
+    <button class="sidebar__toggle"></button>
+    <section class="content">
+      <article class="profile">
+        <h2 class="profile__title">Профиль</h2>
+        <form class="form" action="#" method="post">
+          <div class="form__row">
+            <label class="form__label">Имя</label>
+            <div class="form__input">
+              <input class="form__text-input" type="text" name="name" required placeholder="Имя">
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Отчество</label>
+            <div class="form__input">
+              <input class="form__text-input" type="text" name="patronym" required placeholder="Отчество">
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Фамилия</label>
+            <div class="form__input">
+              <input class="form__text-input" type="text" name="surname" required placeholder="Фамилия">
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Псевдоним</label>
+            <div class="form__input">
+              <input class="form__text-input" type="text" name="nickname" required placeholder="Псевдоним">
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="form__label">e-mail</label>
+            <div class="form__input">
+              <input class="form__text-input" type="e-mail" name="email" required placeholder="e-mail">
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Телефон</label>
+            <div class="form__input">
+              <input class="form__text-input" type="tel" name="tel-number" required placeholder="+7 ХХХ ХХХ ХХ ХХ">
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="form__label">О себе</label>
+            <div class="form__input">
+              <textarea class="form__text-input form__text-input--big" name="about" placeholder="Напишите пару строк о себе"></textarea>
+            </div>
+          </div>
+          <div class="form__row">
+            <span class="form__label">Фото</span>
+            <div class="form__photo">
+              <img src="/img/profile-img.jpg" width="157" height="157" alt="">
+            </div>
+            <button class="form__change-btn" type="button">Поменять фото</button>
+          </div>
+          <div class="form__block">
+            <div class="form__row">
+              <span class="form__label form__label--sub">Получать рассылки</span>
+            </div>
+            <div class="form__row form__row--bm">
+              <label class="form__label">по e-mail</label>
+              <div class="form__input">
+                <input class="form__checkbox-input" type="checkbox" name="mailout" value="email" checked>
+              </div>
+            </div>
+            <div class="form__row form__row--bm">
+              <label class="form__label">по sms</label>
+              <div class="form__input">
+                <input class="form__checkbox-input" type="checkbox" name="mailout" value="sms">
+              </div>
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Изменить пароль</label>
+            <div class="form__input">
+              <input class="form__text-input form__pass-input" type="password">
+            </div>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Еще раз новый пароль</label>
+            <div class="form__input">
+              <input class="form__text-input form__pass-input" type="password">
+            </div>
+          </div>
+          <button class="form__submit" type="submit">Сохранить изменения</button>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

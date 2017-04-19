@@ -1,0 +1,24 @@
+$font: Tahoma, Verdana, Helvetica, sans-serif;
+
+$font-color: #000000;
+
+@mixin btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  color: #fff;
+
+  border: 1px solid #dedcdc;
+
+  cursor: pointer;
+}
+
+@mixin container {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+

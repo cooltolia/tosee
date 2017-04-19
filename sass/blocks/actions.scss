@@ -1,0 +1,25 @@
+.actions {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.actions__login {
+  padding-right: 20px;
+
+  font-family: Tahoma;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fffefe;
+  text-decoration: none;
+  opacity: 0.55;
+
+  background-image: url("/img/icon-enter.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+
+  transition: opacity 300ms ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
