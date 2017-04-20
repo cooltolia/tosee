@@ -17,12 +17,13 @@
 
 .select-modal__exit {
   position: absolute;
-  font-size: 32px;
   color: black;
   background-color: transparent;
   border: none;
-  top: 30px;
+  top: 20px;
   right: 30px;
+
+  background-image: url("../img/close.svg");
 
   cursor: pointer;
 }
