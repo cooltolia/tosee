@@ -1,14 +1,12 @@
 .select-place {
-  position: absolute;
   box-sizing: border-box;
   width: 100%;
   max-width: 706px;
   min-width: 320px;
-  margin: 0 auto;
+  margin: 150px auto 0 auto;
 
   top: 490px;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .select-place__value {
@@ -47,15 +45,25 @@
 .select-place__list {
   margin: 0;
   padding: 0;
-  padding-top: 45px;
-  padding-bottom: 30px;
+  height: 0;
   list-style: none;
 
-  overflow-y: scroll;
   opacity: 0.5;
-  border-radius: 9px;
-  border: 3px solid #ffffff;
+
+  transition: height 300ms ease;
+  overflow: hidden;
+
+  &--active {
+    height: 350px;
+    overflow-y: auto;
+    padding-top: 45px;
+    padding-bottom: 30px;
+    overflow-y: scroll;
+    border: 3px solid #ffffff;
+    border-radius: 9px;
+  }
 }
+
 
 .select-place__option {
   margin-bottom: 5px;

@@ -16,7 +16,7 @@ gulp.task("style", function() {
     .pipe(sass())
     .pipe(postcss([
       autoprefixer({browsers: [
-        "last 2 versions"
+        'last 2 version', '> 2%', 'firefox 15', 'safari 5', 'ie 6', 'ie 7', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'
       ]})
     ]))
     .pipe(gulp.dest("css"))

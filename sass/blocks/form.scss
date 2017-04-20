@@ -12,6 +12,7 @@
   flex-flow: row nowrap;
   align-items: flex-start;
 
+
   margin-bottom: 5px;
 
   &--bm {
@@ -20,7 +21,7 @@
 }
 
 .form__label {
-  display: block;
+  
   min-width: 150px;
   max-width: 230px;
   flex-grow: 1;
@@ -40,6 +41,13 @@
 
 .form__block {
   margin-bottom: 45px;
+
+  &:after{
+    content: " ";
+    display: table;
+    clear: both;
+
+  }
 }
 
 .form__input {
@@ -63,7 +71,9 @@
     width: 100%;
     max-width: 550px;
     min-height: 70px;
+    resize: none;
     font-size: 16px;
+    height: auto;
   }
 
   &::placeholder {
@@ -164,6 +174,8 @@
   .form {
     padding-left: 10%;
     padding-right: 10%;
+    display: block;
+    text-align: center;
   }
 
   .form__block {
@@ -171,18 +183,41 @@
   }
 
   .form__row {
-    flex-direction: column;
+    display: block;
+    text-align: center;
+    // flex-direction: column;
+    // -webkit-justify-content: center;
+    // -ms-flex-pack: center;
+    // justify-content: center;
 
-    &--inline {
-      flex-direction: row;
-    }
+    // &--inline {
+    //   flex-direction: row;
+    // }
+
+    &--bm {
+    margin-bottom: 15px;
+    width: auto;
+    display: inline-block !important;
   }
+  }
+
+
 
   .form__label {
     min-width: 100px;
     width: auto;
     text-align: left;
-    margin-bottom: 5px;
+
+
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: 22px;
+
+    margin-top: 30px;
+    padding: 0px;
+
+    max-width: 100%;
   }
 
   .form__input {
@@ -199,10 +234,12 @@
   }
 
   .form__photo {
+        margin: auto;
     margin-bottom: 15px;
   }
 
   .form__change-btn {
+        margin: auto;
     margin-top: 0;
     margin-bottom: 20px;
   }

@@ -10,4 +10,16 @@
   background-color: #d2d2d2;
 
   font-family: $font;
+
+  
+}
+
+
+
+*:focus, a:focus {
+  outline: none;
+}
+
+.no-scroll{
+  overflow: hidden;
 }

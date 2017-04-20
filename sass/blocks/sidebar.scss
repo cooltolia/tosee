@@ -16,6 +16,7 @@
   margin-left: auto;
   margin-bottom: 20px;
   padding-right: 33px;
+  display: inline-block;
 
   & img {
     display: block;
@@ -33,6 +34,7 @@
   font-weight: 400;
 
   text-align: right;
+  display: inline-block;
 }
 
 .sidebar__block {
@@ -57,6 +59,10 @@
   }
 }
 
+.sidebar__nav {
+  display: inline-block;
+  width: 100%;
+}
 .sidebar__link {
   display: block;
   padding: 0 33px 0 10px;
@@ -94,14 +100,15 @@
   .sidebar {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -110%;
     width: 100%;
     height: 100%;
-    transform: translateX(-110%);
+    
     z-index: 99;
+    overflow: auto;
 
     &--open {
-      transform: translate(0);
+      left: 0;
     }
   }
 
@@ -123,11 +130,13 @@
 
     cursor: pointer;
 
-    transition: transform 500ms ease, background-image 300ms ease;;
+    transition: all 500ms ease, background-image 300ms ease;;
 
     &--close {
-      top: 30px;
+      position: absolute !important;
+      top: 0px;
       left: calc(100% - 63px);
+      
       background-image: url("../img/close.svg");
     }
   }

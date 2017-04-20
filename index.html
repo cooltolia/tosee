@@ -26,11 +26,11 @@
       </div>
       <div class="sidebar__nickname">Тёма</div>
       <div class="sidebar__nav">
-        <a href="#" class="sidebar__link sidebar__link--alone sidebar__link--active">Профиль</a>
+        <a href="/admin/" class="sidebar__link sidebar__link--alone sidebar__link--active">Профиль</a>
         <div class="sidebar__block">
-          <a href="#" class="sidebar__link">Редактор</a>
-          <a href="#" class="sidebar__link">Модератор</a>
-          <a href="#" class="sidebar__link">Директор</a>
+          <a href="/admin/redactor.html" class="sidebar__link">Редактор</a>
+          <a href="/admin/moderator.html" class="sidebar__link">Модератор</a>
+          <a href="/admin/director.html" class="sidebar__link">Директор</a>
         </div>
         <div class="sidebar__block">
           <a href="#" class="sidebar__link">Фотограф</a>
@@ -50,43 +50,43 @@
           <div class="form__row">
             <label class="form__label">Имя</label>
             <div class="form__input">
-              <input class="form__text-input" type="text" name="name" required placeholder="Имя">
+              <input class="form__text-input" type="text" name="name" required placeholder="Имя" value="Тема">
             </div>
           </div>
           <div class="form__row">
             <label class="form__label">Отчество</label>
             <div class="form__input">
-              <input class="form__text-input" type="text" name="patronym" required placeholder="Отчество">
+              <input class="form__text-input" type="text" name="patronym" required placeholder="Отчество" value="Петрович">
             </div>
           </div>
           <div class="form__row">
             <label class="form__label">Фамилия</label>
             <div class="form__input">
-              <input class="form__text-input" type="text" name="surname" required placeholder="Фамилия">
+              <input class="form__text-input" type="text" name="surname" required placeholder="Фамилия" value="Васильков">
             </div>
           </div>
           <div class="form__row">
             <label class="form__label">Псевдоним</label>
             <div class="form__input">
-              <input class="form__text-input" type="text" name="nickname" required placeholder="Псевдоним">
+              <input class="form__text-input" type="text" name="nickname" required placeholder="Псевдоним" value="artemius">
             </div>
           </div>
           <div class="form__row">
             <label class="form__label">e-mail</label>
             <div class="form__input">
-              <input class="form__text-input" type="e-mail" name="email" required placeholder="e-mail">
+              <input class="form__text-input" type="e-mail" name="email" required placeholder="e-mail" value="e-mail">
             </div>
           </div>
           <div class="form__row">
             <label class="form__label">Телефон</label>
             <div class="form__input">
-              <input class="form__text-input" type="tel" name="tel-number" required placeholder="+7 ХХХ ХХХ ХХ ХХ">
+              <input class="form__text-input" type="tel" name="tel-number" required placeholder="+7 ХХХ ХХХ ХХ ХХ" value="+7 911 666 77 88">
             </div>
           </div>
           <div class="form__row">
             <label class="form__label">О себе</label>
             <div class="form__input">
-              <textarea class="form__text-input form__text-input--big" name="about" placeholder="Напишите пару строк о себе"></textarea>
+              <textarea class="form__text-input form__text-input--big" name="about" placeholder="Напишите пару строк о себе">Люблю есть, пить, дышать и ходить в туалет. Любимые напитки - вискарь, пивас, водяра, вода, молоко. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. </textarea>
             </div>
           </div>
           <div class="form__row">
@@ -130,10 +130,10 @@
       </article>
     </section>
     <section class="select-modal select-modal--lang">
-     <button class="select-modal__exit">X</button>
+     <button class="select-modal__exit"></button>
       <div class="select-lang">
-        <p class="select-lang__value">Русский</p>
-        <ul class="select-lang__list">
+        <p class="select-lang__value js-dropdown">Русский</p>
+        <ul class="select-lang__list js-dropdownList">
           <li class="select-lang__option">English</li>
           <li class="select-lang__option">Deutsch</li>
           <li class="select-lang__option">Español</li>
@@ -145,10 +145,10 @@
     </section>
 
     <section class="select-modal select-modal--place">
-     <button class="select-modal__exit">X</button>
+     <button class="select-modal__exit"></button>
       <div class="select-place">
-        <p class="select-place__value">Ваш город Санкт-Петербург?</p>
-        <ul class="select-place__list">
+        <p class="select-place__value js-dropdown">Ваш город Санкт-Петербург?</p>
+        <ul class="select-place__list js-dropdownList">
           <li class="select-place__option"></li>
           <li class="select-place__option">Санкт-Петербург</li>
           <li class="select-place__option">Москва</li>
@@ -171,6 +171,7 @@
 
   </main>
 
+  <script src="js/background_size_emu.js"></script>
   <script src="js/main.js"></script>
 </body>
 

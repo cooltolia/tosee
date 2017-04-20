@@ -1,14 +1,12 @@
 .select-lang {
-  position: absolute;
   box-sizing: border-box;
   width: 100%;
   max-width: 706px;
   min-width: 320px;
-  margin: 0 auto;
+  margin: 150px auto 0 auto;
 
   top: 490px;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .select-lang__value {
@@ -43,10 +41,18 @@
 }
 
 .select-lang__list {
+  height: 0;
   margin: 0;
   padding: 0;
   list-style: none;
+  transition: height 300ms ease;
+  overflow: hidden;
+
+  &--active {
+    height: 350px;
+  }
 }
+
 
 .select-lang__option {
   position: relative;
