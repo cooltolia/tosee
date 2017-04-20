@@ -14,6 +14,8 @@
       <img src="img/logo-sm.png" alt="Логотип">
     </a>
     <div class="actions">
+      <a href="#" class="actions__lang actions__lang--current"></a>
+      <a href="#" class="actions__place"></a>
       <a href="#" class="actions__login">Выйти</a>
     </div>
   </header>
@@ -127,6 +129,46 @@
         </form>
       </article>
     </section>
+    <section class="select-modal select-modal--lang">
+     <button class="select-modal__exit">X</button>
+      <div class="select-lang">
+        <p class="select-lang__value">Русский</p>
+        <ul class="select-lang__list">
+          <li class="select-lang__option">English</li>
+          <li class="select-lang__option">Deutsch</li>
+          <li class="select-lang__option">Español</li>
+          <li class="select-lang__option">Le français</li>
+          <li class="select-lang__option">Português</li>
+          <li class="select-lang__option">Italiano</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="select-modal select-modal--place">
+     <button class="select-modal__exit">X</button>
+      <div class="select-place">
+        <p class="select-place__value">Ваш город Санкт-Петербург?</p>
+        <ul class="select-place__list">
+          <li class="select-place__option"></li>
+          <li class="select-place__option">Санкт-Петербург</li>
+          <li class="select-place__option">Москва</li>
+          <li class="select-place__option">Мурманск</li>
+          <li class="select-place__option">Муром</li>
+          <li class="select-place__option">Милан</li>
+          <li class="select-place__option">Орел</li>
+          <li class="select-place__option">Оренбург</li>
+          <li class="select-place__option">Орехово-зуево</li>
+          <li class="select-place__option">Ростов</li>
+          <li class="select-place__option">Сочи</li>
+          <li class="select-place__option">Алупка</li>
+          <li class="select-place__option">Анапа</li>
+          <li class="select-place__option">Апрелевка</li>
+          <li class="select-place__option">Армянск</li>
+          <li class="select-place__option">Архангельск</li>
+        </ul>
+      </div>
+    </section>
+
   </main>
 
   <script src="js/main.js"></script>

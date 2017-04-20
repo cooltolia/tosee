@@ -449,6 +449,27 @@ template {
   .actions__login:hover {
     opacity: 1; }
 
+.actions__lang {
+  width: 30px;
+  height: 20px;
+  margin-right: 25px;
+  opacity: 0.55;
+  background-image: url("../img/spriteflags.png"); }
+  .actions__lang--current {
+    background-position: -47px -36px; }
+  .actions__lang:hover {
+    opacity: 1; }
+
+.actions__place {
+  width: 14px;
+  height: 18px;
+  margin-right: 25px;
+  background-image: url("../img/spriteicons.png");
+  background-position: -78px -57px;
+  opacity: 0.55; }
+  .actions__place:hover {
+    opacity: 1; }
+
 .main {
   position: relative;
   width: 100%;
@@ -883,3 +904,154 @@ template {
         justify-content: flex-start; }
   .login__link {
     margin-bottom: 15px; } }
+
+.select-modal {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  transform: translateX(-110%);
+  transition: transform 300ms ease;
+  background-color: #363d47; }
+  .select-modal--active {
+    transform: translateX(0); }
+
+.select-modal__exit {
+  position: absolute;
+  font-size: 32px;
+  color: black;
+  background-color: transparent;
+  border: none;
+  top: 30px;
+  right: 30px;
+  cursor: pointer; }
+
+.select-lang {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 706px;
+  min-width: 320px;
+  margin: 0 auto;
+  top: 490px;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.select-lang__value {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  margin-bottom: 52px;
+  padding: 9px 0 11px 160px;
+  border-radius: 9px;
+  border: 3px solid #ffffff;
+  opacity: 0.5;
+  color: #ffffff;
+  font-family: Tahoma, Verdana, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer; }
+  .select-lang__value::before {
+    content: '';
+    position: absolute;
+    left: 96px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 43px;
+    height: 32px;
+    background-image: url("../img/spriteflags.png");
+    background-position: -89px -67px; }
+
+.select-lang__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.select-lang__option {
+  position: relative;
+  margin: 0;
+  padding: 9px 0 11px 160px;
+  opacity: 0.5;
+  color: #ffffff;
+  font-family: Tahoma, Verdana, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer; }
+  .select-lang__option::before {
+    content: '';
+    position: absolute;
+    left: 96px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 20px;
+    background-image: url("../img/spriteflags.png");
+    background-position: -47px -5px; }
+  .select-lang__option:nth-child(2)::before {
+    background-position: -5px -5px; }
+  .select-lang__option:nth-child(3)::before {
+    background-position: -5px -36px; }
+  .select-lang__option:nth-child(4)::before {
+    background-position: -47px 64px; }
+  .select-lang__option:nth-child(5)::before {
+    background-position: -89px -36px; }
+  .select-lang__option:nth-child(6)::before {
+    background-position: -89px -5px; }
+  .select-lang__option:hover {
+    opacity: 1; }
+
+.select-place {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 706px;
+  min-width: 320px;
+  margin: 0 auto;
+  top: 490px;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.select-place__value {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  margin-bottom: 52px;
+  padding: 9px 20px 11px 27px;
+  border-radius: 9px;
+  border: 3px solid #ffffff;
+  opacity: 0.5;
+  color: #ffffff;
+  font-family: Tahoma, Verdana, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer; }
+  .select-place__value::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 42px;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../img/spriteicons.png");
+    background-position: -99px -5px; }
+
+.select-place__list {
+  margin: 0;
+  padding: 0;
+  padding-top: 45px;
+  padding-bottom: 30px;
+  list-style: none;
+  overflow-y: scroll;
+  opacity: 0.5;
+  border-radius: 9px;
+  border: 3px solid #ffffff; }
+
+.select-place__option {
+  margin-bottom: 5px;
+  padding-left: 25px;
+  color: #ffffff;
+  font-family: Tahoma, Verdana, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer; }

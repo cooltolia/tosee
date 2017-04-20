@@ -23,3 +23,36 @@
     opacity: 1;
   }
 }
+
+.actions__lang {
+  width: 30px;
+  height: 20px;
+  margin-right: 25px;
+
+  opacity: 0.55;
+
+  background-image: url("../img/spriteflags.png");
+
+  &--current {
+    background-position: -47px -36px;
+  }
+
+   &:hover {
+    opacity: 1;
+  }
+}
+
+.actions__place {
+  width: 14px;
+  height: 18px;
+  margin-right: 25px;
+
+  background-image: url("../img/spriteicons.png");
+  background-position: -78px -57px;
+
+  opacity: 0.55;
+
+  &:hover {
+    opacity: 1;
+  }
+}

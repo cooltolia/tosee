@@ -1,0 +1,28 @@
+.select-modal {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+
+  transform: translateX(-110%);
+  transition: transform 300ms ease;
+
+  background-color: #363d47;
+
+  &--active {
+    transform: translateX(0);
+
+  }
+}
+
+.select-modal__exit {
+  position: absolute;
+  font-size: 32px;
+  color: black;
+  background-color: transparent;
+  border: none;
+  top: 30px;
+  right: 30px;
+
+  cursor: pointer;
+}
